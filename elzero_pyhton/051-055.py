@@ -114,22 +114,22 @@ for key in students:
 
 
 
+#using items() 
 
-
-# for student_name, subjects in students.items():
-#     print("-" * 30)
-#     print(f"-- Student Name => {student_name}")
-#     print("-" * 30)
-#     total = 0
-#     for subject, grade in subjects.items():
-#         if grade == "A":
-#             points = 100
-#         elif grade == "B":
-#             points = 80
-#         elif grade == "C":
-#             points = 40
-#         elif grade == "D":
-#             points = 20
-#         total += points
-#         print(f"- {subject} => {points} Points")
-#     print(f"Total Points For {student_name} Is {total}")
+for student_name, subjects in students.items():
+    print("-" * 30)
+    print(f"-- Student Name => {student_name}")
+    print("-" * 30)
+    total = 0
+    for subject, grade in subjects.items():
+        if grade == "A":
+            points = 100
+        elif grade == "B":
+            points = 80
+        elif grade == "C":
+            points = 40
+        elif grade == "D":
+            points = 20
+        total += points
+        print(f"- {subject} => {points} Points")
+    print(f"Total Points For {student_name} Is {total}")
