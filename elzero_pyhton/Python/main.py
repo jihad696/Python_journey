@@ -1,3 +1,3 @@
-from .my_mod import say_welcome
+from my_mod import say_welcome
 
-say_welcome()
+say_welcome("ahmed")
