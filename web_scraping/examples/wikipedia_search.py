@@ -6,7 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 
-# before that you have to use "pip install selenium" and this is code work for only chrome browser
+# before that you have to use "pip install selenium" and this is code work for only chrome browser.
 options = Options()
 service = Service(ChromeDriverManager().install())
 browser = webdriver.Chrome(service=service, options=options)
