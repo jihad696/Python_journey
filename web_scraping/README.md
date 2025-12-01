@@ -16,9 +16,16 @@ This repository contains Selenium automation scripts along with a beginner-frien
 
 ---
 
-## Locators
+## Selenium Locators (By)
 
-- `By.ID`, `By.NAME`, `By.CLASS_NAME`, `By.TAG_NAME`, `By.LINK_TEXT`, `By.PARTIAL_LINK_TEXT`, `By.CSS_SELECTOR`, `By.XPATH`
+- `By.ID` → Select element by its `id` attribute.
+- `By.NAME` → Select element by its `name` attribute.
+- `By.CLASS_NAME` → Select element by its class.
+- `By.TAG_NAME` → Select element by its HTML tag.
+- `By.LINK_TEXT` → Select `<a>` element by exact link text.
+- `By.PARTIAL_LINK_TEXT` → Select `<a>` element by partial text.
+- `By.CSS_SELECTOR` → Select element(s) using CSS selector syntax.
+- `By.XPATH` → Select element(s) using XPath expression.
 
 ---
 
@@ -74,3 +81,5 @@ Python_Selenium_Projects/
 │   └─ python_news_brave.py   # Python.org news scraper (Brave)
 ├─ requirements.txt           # Selenium & WebDriver dependencies
 ```
+
+This README is ready to push to GitHub and provides everything a beginner needs to understand and run the scripts.
