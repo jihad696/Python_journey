@@ -65,7 +65,6 @@ if not found:
 else:
     conn.commit()
 
-
 cur.close()
 conn.close()
 print("PostgreSQL database and users table are ready!")
