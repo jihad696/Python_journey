@@ -1,15 +1,13 @@
 my_nums = [15, 81, 5, 17, 20, 21, 13]
-i = 0 
 count = 0
-my_nums.sort(reverse=True)
-for my_nums[i] in my_nums:
+my_nums.sort(reverse=True)  
 
-    if my_nums[i] % 5 == 0:
-       count +=1
-       print(f"{count} => {my_nums[i]}")
-    i +=1
+for num in my_nums:
+    if num % 5 == 0:
+        count += 1
+        print(f"{count} => {num}")
 else:
-    print("All Numbers Printed")
+    print("All Numbers Printed")   
 
 
 
