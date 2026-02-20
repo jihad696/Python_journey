@@ -33,28 +33,39 @@
 #     print("Good")
 
 # =============================
-
-
-def my_all(*args):
-    if not args:
-        return False
-
-    iterable = args[0] if len(args) == 1 else args
-
-    try:
-        for item in iterable:
-            if isinstance(item, (list, tuple, set)):
-                for sub in item:
-                    if not sub:
-                        return False
-            else:
-                if not item:
-                    return False
-    except TypeError:
-        if not iterable:
+def my_all(iterable):
+    for item in iterable:
+        if not item:
             return False
-
     return True
+
+def my_any(iterable):
+    for item in iterable:
+        if item:
+            return True
+    return False
+
+def my_min(iterable):
+    iterator = iter(iterable)
+    try:
+        minimum = next(iterator)
+        for item in iterator:
+            if item < minimum:
+                minimum = item
+        return minimum
+    except StopIteration:
+        raise ValueError("my_min() arg is an empty sequence")
+
+def my_max(iterable):
+    iterator = iter(iterable)
+    try:
+        maximum = next(iterator)
+        for item in iterator:
+            if item > maximum:
+                maximum = item
+        return maximum
+    except StopIteration:
+        raise ValueError("my_max() arg is an empty sequence")   
 
 
 # my_all
