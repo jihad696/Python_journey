@@ -32,20 +32,19 @@ def get_people_scores(name="", **scores):
 # ===========================================
 scores_list = {"Math": 90, "Science": 80, "Language": 70}
 
-
 def get_the_scores(name="", **scores):
     if name and not scores:
         print(f"Hello {name} You Have No Scores To Show")
-        return
-    if name and scores:
+    elif name and scores:
         print(f"Hello {name} This Is Your Score Table:")
-    print_scores(scores)
+        for subject, score in scores.items():
+            print(f"- {subject} => {score}")
+    else:
+        for subject, score in scores.items():
+            print(f"- {subject} => {score}")
+
+get_the_scores("Osama", **scores_list)   
+#============================================================
 
 
-def print_scores(scores):
-    if len(scores) == 0:
-        return
-    subject, score = list(scores.items())[0]
-    print(f"{subject} => {score}")
-    remaining = dict(list(scores.items())[1:])
-    print_scores(remaining)
+
