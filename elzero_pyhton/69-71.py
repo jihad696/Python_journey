@@ -33,40 +33,42 @@
 #     print("Good")
 
 # =============================
-
-
-def my_all(*args):
-    if not args:
-        return False
-
-    iterable = args[0] if len(args) == 1 else args
-
-    try:
-        for item in iterable:
-            if isinstance(item, (list, tuple, set)):
-                for sub in item:
-                    if not sub:
-                        return False
-            else:
-                if not item:
-                    return False
-    except TypeError:
-        if not iterable:
+def my_all(iterable):
+    for item in iterable:
+        if not item:
             return False
-
     return True
 
+def my_any(iterable):
+    for item in iterable:
+        if item:
+            return True
+    return False
 
-# my_all
-print(my_all([1, 2, 3]))  # True
-print(my_all([1, 2, 3, []]))  # False
+def my_min(iterable):
+    iterator = iter(iterable)
+    try:
+        minimum = next(iterator)
+        for item in iterator:
+            if item < minimum:
+                minimum = item
+        return minimum
+    except StopIteration:
+        raise ValueError("my_min() arg is an empty sequence")
+
+def my_max(iterable):
+    iterator = iter(iterable)
+    try:
+        maximum = next(iterator)
+        for item in iterator:
+            if item > maximum:
+                maximum = item
+        return maximum
+    except StopIteration:
+        raise ValueError("my_max() arg is an empty sequence")   
 
 
-# قم بعمل Function تقوم بنفس آلية عمل ال all وقم بتسميتها my_all
-# قم بعمل Function تقوم بنفس آلية عمل ال any وقم بتسميتها my_any
-# قم بعمل Function تقوم بنفس آلية عمل ال min وقم بتسميتها my_min
-# قم بعمل Function تقوم بنفس آلية عمل ال max وقم بتسميتها my_max
-# تأكد ان my_min + my_max تقبل List أو Tuple
+
 
 
 # # my_any
