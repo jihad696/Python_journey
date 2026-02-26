@@ -2,6 +2,7 @@ import math
 from abc import ABC,abstractmethod
 
 class Shape(ABC):
+
     @abstractmethod
     def area(self):
         return 0  
@@ -44,6 +45,7 @@ class Rectangle(Shape):
 
 
 class Triangle(Shape):
+    
     def __init__(self, base, height):
         self.base = base
         self.height = height
